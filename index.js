@@ -7,14 +7,9 @@ const chartDataRoutes = require("./routes/ChartData");
 dotenv.config();
 
 const app = express();
-const corsOptions = {
-    origin: 'https://quiet-blancmange-0f5af0.netlify.app/', // Replace with your Netlify site's URL
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    allowedHeaders: ['Content-Type', 'Authorization'],
-};
 
-app.use(cors(corsOptions));
-// app.use(cors());
+
+app.use(cors());
 app.use(express.json());
 
 // Connect to Database
